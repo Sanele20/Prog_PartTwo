@@ -61,11 +61,10 @@ public class TaskTest {
         String taskNumber = "1";
         String developerDetails = "Mike Smith";
         Task instance = new Task();
-        String expResult = "AD:1:BYN";
+        String expResult = "AD:1:ITH";
         String result = instance.createTaskID(taskName, taskNumber, developerDetails);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**

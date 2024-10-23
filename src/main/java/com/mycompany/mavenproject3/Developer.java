@@ -158,7 +158,7 @@ public class Developer extends javax.swing.JFrame {
                     
                     String taskStatus = userChoice;
                     String developerjDetails = JOptionPane.showInputDialog("Enter Developer Details");
-                    String taskNumber = JOptionPane.showInputDialog("Enter Task Number");
+                    String taskNumber = Integer.toString(i);
                     String taskName = JOptionPane.showInputDialog("Enter Task Name");
                     String description = JOptionPane.showInputDialog("Enter Task Description");
                     task.checkTaskDescription(description);
