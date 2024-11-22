@@ -1,7 +1,5 @@
 package com.mycompany.mavenproject3;
 import javax.swing.JOptionPane;
-import javax.swing.JButton;
-import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -26,7 +24,7 @@ public class Developer extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
     public Developer() {
-        initComponents();
+        initComponents();   
     }
 
     /**
@@ -38,84 +36,130 @@ public class Developer extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        bAdd = new javax.swing.JButton();
+        bReport = new javax.swing.JButton();
+        bQuit = new javax.swing.JButton();
+        bSearchTask = new javax.swing.JButton();
+        bSearchDev = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tDisplay = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        bHelpD = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("1) ADD TASKS");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        bAdd.setText("1) ADD TASKS");
+        bAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                bAddActionPerformed(evt);
             }
         });
 
-        jButton2.setText("2) SHOW REPORT");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        bReport.setText("2) SHOW REPORT");
+        bReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                bReportActionPerformed(evt);
             }
         });
 
-        jButton3.setText("3) QUIT");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        bQuit.setText("3) QUIT");
+        bQuit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                bQuitActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
-        jLabel2.setText("WELCOME TO EASYKANBAN");
-        jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bSearchTask.setText("SEARCH BY TASK NAME");
+        bSearchTask.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSearchTaskActionPerformed(evt);
+            }
+        });
+
+        bSearchDev.setText("SEARCH BY DEVELOPER");
+        bSearchDev.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSearchDevActionPerformed(evt);
+            }
+        });
+
+        tDisplay.setColumns(20);
+        tDisplay.setRows(5);
+        jScrollPane1.setViewportView(tDisplay);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 18)); // NOI18N
+        jLabel1.setText("TASK MANAGER");
+
+        bHelpD.setText("HELP");
+        bHelpD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bHelpDActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(237, 237, 237)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(235, 235, 235)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(176, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(46, 46, 46))
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bHelpD)
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(bSearchDev, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(bSearchTask, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(bAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(29, 29, 29)
+                            .addComponent(bReport, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(31, 31, 31)
+                            .addComponent(bQuit, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1)))
+                .addGap(70, 70, 70))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addGap(24, 24, 24)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(bSearchTask)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bSearchDev)
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bReport, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bQuit, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addComponent(bHelpD)
+                .addGap(28, 28, 28))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void bReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bReportActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "THIS FEATURE IS STILL IN DEVELOPMENT.", 
-                "COMING SOON", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_jButton2ActionPerformed
+           
+       
+      // Get the data as a string from the printData method
+        String data = task.displayData();
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // Clear the JTextArea and display the data
+        tDisplay.setText("");  // Clear any previous content
+        tDisplay.append(data);  // Append the new data
+      
+       
+        
+    }//GEN-LAST:event_bReportActionPerformed
+
+    private void bQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bQuitActionPerformed
         // TODO add your handling code here:
-       jButton3.addActionListener(new ActionListener() {
+       bQuit.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent e) {
         // Create an instance of the new frame
@@ -125,11 +169,11 @@ public class Developer extends javax.swing.JFrame {
         Developer.this.setVisible(false);
     }
 });
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_bQuitActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void bAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddActionPerformed
         // TODO add your handling code here:
-         jButton1.addActionListener(new ActionListener() {
+         bAdd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
               
@@ -143,7 +187,7 @@ public class Developer extends javax.swing.JFrame {
                     } else {
                         JOptionPane.showMessageDialog(null, "Please enter a positive number.");
                     }
-             
+              
                 
                 for (int i = 0; i < numberOfTasks; i++) {
                       String userChoice = (String) JOptionPane.showInputDialog(
@@ -158,26 +202,57 @@ public class Developer extends javax.swing.JFrame {
                     
                     String taskStatus = userChoice;
                     String developerjDetails = JOptionPane.showInputDialog("Enter Developer Details");
-                    String taskNumber = Integer.toString(i);
+                    String taskNumber = Integer.toString(i) + 1;
                     String taskName = JOptionPane.showInputDialog("Enter Task Name");
                     String description = JOptionPane.showInputDialog("Enter Task Description");
                     task.checkTaskDescription(description);
-                    String sduration = JOptionPane.showInputDialog("Enter Task Duratioj");
+                    String sduration = JOptionPane.showInputDialog("Enter Task Duration");
                     int duration = Integer.parseInt(sduration); // 
                     String taskID = task.createTaskID(taskName, taskNumber, developerjDetails);
                     
-                    JOptionPane.showMessageDialog(null, task.printTaskDetails(taskStatus, 
-                            developerjDetails, taskNumber, taskName, description, taskID, duration));
+                    task.addData(developerjDetails, taskStatus, taskName, taskNumber, description, taskID, duration);
+                    totalHrs += duration; 
                     
-                    
-                    
-                    
-                    totalHrs = Task.returnTotalHours(totalHrs, duration);
-                    JOptionPane.showMessageDialog(null,"Total Hours: " + totalHrs);
                 }
+              task.printData(); 
+              JOptionPane.showMessageDialog(null,"Total Hours of all tasks: " + totalHrs);
             }
         });
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_bAddActionPerformed
+
+    private void bHelpDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bHelpDActionPerformed
+        // TODO add your handling code here:
+         String helpMessage = """
+                              Help Instructions:
+                              
+                              1. 'SEARCH BY TASK NAME' allows you to search for task details using the name of the task.
+                              2. 'SEARCH BY DEVELOPER' allows you to search for all the tasks assigned to a developer.
+                              3. 'ADD' allows you to add new tasks.
+                              4. 'SHOW REPORT' all the tasks and their details.
+                              5. 'QUIT' closes the Developer page and takes you back to the login page.""";
+                
+
+        JOptionPane.showMessageDialog(null, helpMessage, "Help", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_bHelpDActionPerformed
+
+    private void bSearchTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSearchTaskActionPerformed
+        // TODO add your handling code here:
+         String sSearch = JOptionPane.showInputDialog("Enter Task Name to search");
+         String sResult;
+         sResult = task.SearchTask(sSearch);
+        
+       JOptionPane.showMessageDialog(null, sResult, "Search Results", JOptionPane.INFORMATION_MESSAGE);  
+        
+    }//GEN-LAST:event_bSearchTaskActionPerformed
+
+    private void bSearchDevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSearchDevActionPerformed
+        // TODO add your handling code here:
+         String developerDetails = JOptionPane.showInputDialog("Enter Developer to search for.");
+                  String sResult;
+
+         sResult = task.SearchDev(developerDetails);
+         JOptionPane.showMessageDialog(null, sResult, "Search Results", JOptionPane.INFORMATION_MESSAGE);  
+    }//GEN-LAST:event_bSearchDevActionPerformed
 
     /**
      * @param args the command line arguments
@@ -209,6 +284,7 @@ public class Developer extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Developer().setVisible(true);
             }
@@ -222,9 +298,14 @@ public class Developer extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton bAdd;
+    private javax.swing.JButton bHelpD;
+    private javax.swing.JButton bQuit;
+    private javax.swing.JButton bReport;
+    private javax.swing.JButton bSearchDev;
+    private javax.swing.JButton bSearchTask;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea tDisplay;
     // End of variables declaration//GEN-END:variables
 }
